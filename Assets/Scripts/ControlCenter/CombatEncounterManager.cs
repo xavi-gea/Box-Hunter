@@ -19,6 +19,7 @@ public class CombatEncounterManager : MonoBehaviour
 
     public bool isInCombatZone;
     public bool isInCombat;
+    public bool playerLost = false;
 
     public List<CreaturePool> creaturePool;
 
@@ -105,6 +106,11 @@ public class CombatEncounterManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(combatSceneName);
 
         InputManager.Instance.SetInputMap(ActionMap.Player);
+
+        if (playerLost)
+        {
+            PlayerManager.Instance.MovePlayerToSpawn();
+        }
 
         isInCombat = false;
     }

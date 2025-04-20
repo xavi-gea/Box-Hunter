@@ -434,13 +434,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: 6276275842141237653, guid: 38928e68ac8329a449c4c2792c29648f, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 857f0cae6c672584b9f6a81dc568c5de, type: 2}
     - target: {fileID: 8868643093135430174, guid: 38928e68ac8329a449c4c2792c29648f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 8868643093135430174, guid: 38928e68ac8329a449c4c2792c29648f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.86
       objectReference: {fileID: 0}
     - target: {fileID: 8868643093135430174, guid: 38928e68ac8329a449c4c2792c29648f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -679,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 3661763814824184387, guid: 6991bf49cff9aad4099549ee8176549b, type: 3}
       propertyPath: creaturePool.Array.data[0].creature
       value: 
-      objectReference: {fileID: 11400000, guid: 656993de65189b04392777330dcbf657, type: 2}
+      objectReference: {fileID: 11400000, guid: 08bdd639036c648479790753a79b5cac, type: 2}
     - target: {fileID: 3661763814824184387, guid: 6991bf49cff9aad4099549ee8176549b, type: 3}
       propertyPath: creaturePool.Array.data[1].creature
       value: 
@@ -735,19 +739,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 67755874547454505, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: sceneName
-      value: SampleScene2
+      value: SampleScene
       objectReference: {fileID: 0}
     - target: {fileID: 67755874547454505, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: spawnLocation
       value: 
-      objectReference: {fileID: 11400000, guid: 0d5a470b591f1a345888b08ef53a49a7, type: 2}
+      objectReference: {fileID: 11400000, guid: d58a8192d1662c345b973dac30295d45, type: 2}
     - target: {fileID: 7193049803506979536, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.99
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 7193049803506979536, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.45
+      value: -0.62
       objectReference: {fileID: 0}
     - target: {fileID: 7193049803506979536, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -783,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8007197913437289616, guid: de4a7c835a6bdc140852ad2ae40feaf0, type: 3}
       propertyPath: m_Name
-      value: ToSampleScene2
+      value: ToSampleScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -725,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 260541696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5679092, y: 3.7760484, z: -0.073671386}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1103,10 +1103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 100
-    m_Right: 100
-    m_Top: 65
-    m_Bottom: 65
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
   m_ChildAlignment: 4
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
@@ -1904,8 +1904,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1583198982}
   m_SourcePrefab: {fileID: 100100000, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+--- !u!1 &1030035027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+  m_PrefabInstance: {fileID: 1030035026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1093021212 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3763338944522935780, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
@@ -1916,7 +1924,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5991089208712763560, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
   m_PrefabInstance: {fileID: 1124270588}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1124270589}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -2053,8 +2061,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1124270590}
   m_SourcePrefab: {fileID: 100100000, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+--- !u!1 &1124270589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
+  m_PrefabInstance: {fileID: 1124270588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1124270590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124270589}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 153.0867
+  m_MinHeight: 50
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &1148865005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,12 +2675,32 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5991089208712763560, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
   m_PrefabInstance: {fileID: 1030035026}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1030035027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1583198982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030035027}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 153.0867
+  m_MinHeight: 50
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &1659599479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,12 +3555,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 10
     m_Right: 10
-    m_Top: 5
-    m_Bottom: 5
+    m_Top: 10
+    m_Bottom: 10
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 271, y: 88}
+  m_CellSize: {x: 180, y: 50}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 2

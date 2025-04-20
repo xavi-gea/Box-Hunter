@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 481862126933171011}
   - component: {fileID: 4538563085461130006}
   - component: {fileID: 7550610154305145762}
+  - component: {fileID: 4968667584793908579}
   - component: {fileID: 6868397478962592687}
   - component: {fileID: 1158926015583333708}
   - component: {fileID: 4295124876435690221}
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f310dee3a8f5594fbd5d33c282acd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4968667584793908579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425940672267509065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324a1a9001cdd944fa65416ed1cea0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6868397478962592687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +147,7 @@ MonoBehaviour:
   combatChanceIncrease: 0
   isInCombatZone: 0
   isInCombat: 0
+  playerLost: 0
   creaturePool: []
 --- !u!114 &2956986310877647394
 MonoBehaviour:
@@ -148,5 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 8707577260594503371, guid: 92460bba9bb7fc64f953bd3f0efeeee7, type: 3}
+  playerGameObject: {fileID: 0}
   spawnLocation: {fileID: 0}
+  saveSpawnLocation: {fileID: 0}
   CurrentCreature: {fileID: 11400000, guid: db2a4cd6837f2c548abac414fc6402e8, type: 2}

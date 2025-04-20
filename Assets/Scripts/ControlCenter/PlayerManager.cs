@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -5,9 +6,10 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance { get; private set; }
 
     public GameObject playerPrefab;
+    public GameObject playerGameObject;
 
     public SpawnLocation spawnLocation = null;
-    // or SpawnLocation
+    public SpawnLocation saveSpawnLocation = null;
 
     public Creature CurrentCreature;
 
@@ -20,13 +22,21 @@ public class PlayerManager : MonoBehaviour
     {
         if (Instance == this)
         {
-            spawnLocation = (spawnLocation == null) ? defaultSpawnLocation : spawnLocation;
+            if (saveSpawnLocation == null)
+            {
+                spawnLocation = (spawnLocation == null) ? defaultSpawnLocation : spawnLocation;
+            }
+            else
+            {
+                spawnLocation = saveSpawnLocation;
+                saveSpawnLocation = null;
+            }
 
-            GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
+            playerGameObject = GameObject.FindGameObjectWithTag("Player");
 
             if (playerGameObject == null)
             {
-                Instantiate(playerPrefab, spawnLocation.position, Quaternion.identity);
+                playerGameObject = Instantiate(playerPrefab, spawnLocation.position, Quaternion.identity);
             }
             else
             {
@@ -36,6 +46,17 @@ public class PlayerManager : MonoBehaviour
         else
         {
             Instance.SpawnPlayer(defaultSpawnLocation);
+        }
+    }
+    public void MovePlayerToSpawn()
+    {
+        if (Instance == this)
+        {
+            SpawnPlayer(spawnLocation);
+        }
+        else
+        {
+            Instance.MovePlayerToSpawn();
         }
     }
 }

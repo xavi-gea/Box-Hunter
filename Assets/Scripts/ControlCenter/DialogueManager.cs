@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -39,15 +40,23 @@ public class DialogueManager : MonoBehaviour
 
     private void ToggleInputMap()
     {
-        if (!CombatEncounterManager.Instance.isInCombat)
-        {
+        if (!CombatEncounterManager.Instance.isInCombat && 
+            !ScreenManager.Instance.isGamePaused) {
+
             InputManager.Instance.ToggleInputMap();
         }
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        isDialogueInProgress = true;
+        if (isDialogueInProgress)
+        {
+            Destroy(dialogueBox);
+        }
+        else
+        {
+            isDialogueInProgress = true;
+        }
 
         ToggleInputMap();
 
