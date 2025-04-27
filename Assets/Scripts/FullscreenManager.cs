@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class FullscreenController : MonoBehaviour
+public class FullscreenManager : MonoBehaviour
 {
     private TextMeshProUGUI buttonText;
 
