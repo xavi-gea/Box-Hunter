@@ -18,8 +18,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVector;
     private Rigidbody2D rb2D;
 
-    private float xAxis;
-    private float yAxis;
+    private float xAxis = 0;
+    private float yAxis = 0;
+
+    private float lastXAxis = 0;
+    private float lastYAxis = 0;
+
+    private Animator animator;
 
     private InputAction moveAction;
 
@@ -36,6 +41,7 @@ public class PlayerController : MonoBehaviour
         resumeAction = InputSystem.actions.FindAction("UI/Resume");
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
 
         InputManager.Instance.SetInputMap(ActionMap.Player);
     }
@@ -85,6 +91,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
+            lastXAxis = moveVector.x;
+            lastYAxis = moveVector.y;
+
+            AnimateMovement(true);
+
             rb2D.MovePosition(rb2D.position + (moveSpeed * Time.fixedDeltaTime * moveVector));
 
             interactor.transform.SetLocalPositionAndRotation(moveVector, Quaternion.identity);
@@ -93,6 +104,27 @@ public class PlayerController : MonoBehaviour
             {
                 CombatEncounterManager.Instance.IncreaseCombatChance();
             }
+        
+        }
+        else
+        {
+            AnimateMovement(false);
+        }
+    }
+
+    private void AnimateMovement(bool isMoving)
+    {
+        animator.SetBool("isMoving", isMoving);
+
+        if (isMoving)
+        {
+            animator.SetFloat("xAxis", moveVector.x);
+            animator.SetFloat("yAxis", moveVector.y);
+        }
+        else
+        {
+            animator.SetFloat("xAxis", lastXAxis);
+            animator.SetFloat("yAxis", lastYAxis);
         }
     }
     
