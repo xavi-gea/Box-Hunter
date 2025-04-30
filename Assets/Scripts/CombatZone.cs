@@ -22,6 +22,10 @@ public class CombatZone : MonoBehaviour
     [Tooltip("List of creatures that will start combat in this zone")]
     public List<CreaturePool> creaturePool = new();
 
+    /// <summary>
+    /// When the player enters the collider, comunicate it to <see cref="CombatEncounterManager"/> and set up relevant data for the future encounter
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -34,15 +38,21 @@ public class CombatZone : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// When the player exits the collider, comunicate it to <see cref="CombatEncounterManager"/>
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            // if player no longer detected, comunicate to CombatManager that player is NOT in combat zone
             CombatEncounterManager.Instance.isInCombatZone = false;
         }
     }
 
+    /// <summary>
+    /// Calculate the total chance for each creature in <see cref="creaturePool"/>. Return an error if the total is not equal to 100
+    /// </summary>
     void Start()
     {
         if (creaturePool.Count > 0)
