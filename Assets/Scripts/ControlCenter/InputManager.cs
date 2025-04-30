@@ -14,6 +14,9 @@ public class InputManager : MonoBehaviour
     private InputActionMap playerMap;
     private InputActionMap uiMap;
 
+    /// <summary>
+    /// Find and assign the player and UI <see cref="InputActionMap"/>
+    /// </summary>
     private void Awake()
     {
         Instance = this;
@@ -22,11 +25,18 @@ public class InputManager : MonoBehaviour
         uiMap = InputSystem.actions.FindActionMap("UI");
     }
 
+    /// <summary>
+    /// By default, set the UI <see cref="ActionMap"/> as the active one
+    /// </summary>
     private void Start()
     {
         SetInputMap(ActionMap.UI);
     }
 
+    /// <summary>
+    /// Set the specified <paramref name="actionMap"/> as the active one and disable the rest
+    /// </summary>
+    /// <param name="actionMap"></param>
     public void SetInputMap(ActionMap actionMap)
     {
         if (actionMap.Equals(ActionMap.Player))
@@ -41,6 +51,9 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Enables the other <see cref="InputActionMap"/> and disables the current one
+    /// </summary>
     public void ToggleInputMap()
     {
         if (playerMap.enabled)

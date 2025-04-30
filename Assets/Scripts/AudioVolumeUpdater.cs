@@ -10,6 +10,9 @@ public class AudioVolumeUpdater : MonoBehaviour
         volumeSlider = gameObject.GetComponent<Slider>();
     }
 
+    /// <summary>
+    /// Sets the global audio volume to be the same as <see cref="volumeSlider"/> value
+    /// </summary>
     public void UpdateVolume()
     {
         if (volumeSlider == null)

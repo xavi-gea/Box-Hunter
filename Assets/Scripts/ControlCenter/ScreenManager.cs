@@ -11,7 +11,6 @@ public class ScreenManager : MonoBehaviour
 
     [Header("Pause")]
     public bool isGamePaused = false;
-    //public UnityEvent gameUnPaused;
     public GameObject pauseMenuPrefab;
     private GameObject instantiatedPauseMenu;
 
@@ -164,6 +163,9 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Open the main menu scene
+    /// </summary>
     public void GoToMainMenu()
     {
         UnPauseGame();
@@ -172,6 +174,9 @@ public class ScreenManager : MonoBehaviour
         SceneManager.LoadSceneAsync(mainMenuSceneName);
     }
 
+    /// <summary>
+    /// Close the game or unity editor
+    /// </summary>
     public void ExitGame()
     {
 #if UNITY_EDITOR

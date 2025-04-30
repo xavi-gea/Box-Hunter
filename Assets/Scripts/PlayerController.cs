@@ -32,7 +32,9 @@ public class PlayerController : MonoBehaviour
     private InputAction pauseAction;
     private InputAction resumeAction;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// At the start, set the player <see cref="ActionMap"/> to be the active one
+    /// </summary>
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Player/Move");
@@ -46,7 +48,9 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.SetInputMap(ActionMap.Player);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Each frame, check if the player has pressed the move, interact or pause buttons
+    /// </summary>
     void Update()
     {
         moveVector = moveAction.ReadValue<Vector2>().normalized;
@@ -54,12 +58,17 @@ public class PlayerController : MonoBehaviour
         HandlePause();
     }
 
-
+    /// <summary>
+    /// Each fixed frame, check the movement of the player
+    /// </summary>
     void FixedUpdate()
     {
         HandleMovement();
     }
 
+    /// <summary>
+    /// If the player is pressing any of the movement keys, move this gameObject, animate it and also move the <see cref="interactor"/> by the same distance
+    /// </summary>
     private void HandleMovement()
     {
         if (!moveVector.Equals(Vector2.zero))
@@ -112,6 +121,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the player is moving, animate it's sprite on the relevant axis
+    /// If not, keep track of the last x and Y axis
+    /// </summary>
+    /// <param name="isMoving"></param>
     private void AnimateMovement(bool isMoving)
     {
         animator.SetBool("isMoving", isMoving);
@@ -128,6 +142,10 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// If the player presses the interact button, draw a raycast between the player and <see cref="interactor"/>
+    /// If it collides with something and that something contains <see cref="IInteractable"/>, invoke it's Interact function
+    /// </summary>
     private void HandleInteraction()
     {
         if (interactAction.IsPressed())
@@ -151,6 +169,10 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// If the player presses the pause button and is not in combat, pause the game
+    /// </summary>
     private void HandlePause()
     {
         if (!CombatEncounterManager.Instance.isInCombat)

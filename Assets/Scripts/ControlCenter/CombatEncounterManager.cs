@@ -33,12 +33,14 @@ public class CombatEncounterManager : MonoBehaviour
         // it can be called from outside of the additive combat scene
         //canvas = GameObject.Find("Canvas");
     }
+
+    /// <summary>
+    /// Every time this is called, increase de current combat chance by <see cref="combatChanceIncrease"/>
+    /// If the roll succedes, suffle the <see cref="creaturePool"/>, get a random creature taking into account it's chance and start the combat
+    /// </summary>
     public void IncreaseCombatChance()
     {
-        // increase currentCombatChance with combatChanceIncrease
         currentCombatChance += combatChanceIncrease;
-
-        // roll with currentCombatChance to see if combat should be started
 
         if (currentCombatChance >= Random.Range(0, 100))
         {
@@ -63,6 +65,9 @@ public class CombatEncounterManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Suffle the <see cref="creaturePool"/> using the fisher–yates shuffle, 
+    /// </summary>
     private void SuffleCreaturePool()
     {
         SystemRandom randomCreatureIndex = new();
@@ -80,6 +85,9 @@ public class CombatEncounterManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instance the combat scene and start the combat with the set <see cref="CreatureToFight"/>
+    /// </summary>
     public void StartCombat()
     {
         isInCombat = true;
@@ -95,11 +103,15 @@ public class CombatEncounterManager : MonoBehaviour
         Debug.Log("Combat started with: " + CreatureToFight.title);
     }
 
+    /// <summary>
+    /// Set the main scene as the active one and unload the currently opened combat scene
+    /// If the player lost, move it to the spawn point
+    /// </summary>
     public void EndCombatEncounter()
     {
         currentCombatChance = 0;
 
-        // transition here or inside SceneController
+        // visual transition here or inside SceneController
 
         SceneManager.SetActiveScene(mainScene);
 

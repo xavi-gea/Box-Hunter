@@ -18,6 +18,11 @@ public class PlayerManager : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// Get the spawn location, and if the player gameObject exists, move it to that spawn location
+    /// If not, instantiate a prefab of the player in the spawn location
+    /// </summary>
+    /// <param name="defaultSpawnLocation"></param>
     public void SpawnPlayer(SpawnLocation defaultSpawnLocation)
     {
         if (Instance == this)
@@ -48,6 +53,11 @@ public class PlayerManager : MonoBehaviour
             Instance.SpawnPlayer(defaultSpawnLocation);
         }
     }
+
+    /// <summary>
+    /// Using the <see cref="spawnLocation"/>, move the player to it
+    /// In this case, the player gameObject should already exist
+    /// </summary>
     public void MovePlayerToSpawn()
     {
         if (Instance == this)

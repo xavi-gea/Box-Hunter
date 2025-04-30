@@ -28,6 +28,11 @@ public class CreatureCombatData
         CombatMoves = new List<CombatMove>(creature.combatMoves);
     }
 
+    /// <summary>
+    /// Decrease the health of this <see cref="CreatureCombatData"/> by the ammount and effectiveness of the <paramref name="combatMove"/> provided
+    /// </summary>
+    /// <param name="targetAffinity"></param>
+    /// <param name="combatMove"></param>
     public void DecreaseHealth(Affinity targetAffinity, CombatMove combatMove)
     {
         float amountToDecrease = combatMove.amount;
@@ -45,6 +50,12 @@ public class CreatureCombatData
         Health = Mathf.Clamp(Health - amountToDecrease, 0, Health);
     }
 
+    /// <summary>
+    /// From the provided <paramref name="combatMove"/>, get it's <see cref="Effectiveness"/> against the <paramref name="targetAffinity"/>
+    /// </summary>
+    /// <param name="targetAffinity"></param>
+    /// <param name="combatMove"></param>
+    /// <returns></returns>
     public static Effectiveness GetMoveEffectiveness(Affinity targetAffinity, CombatMove combatMove)
     {
         if (targetAffinity.weakAgainst.Contains(combatMove.affinity))

@@ -19,8 +19,6 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typingCoroutine;
     public float textDelay = 0.05f;
 
-    //private GameObject canvas;
-
     public GameObject dialogueBoxPrefab;
     private GameObject dialogueBox;
 
@@ -29,8 +27,6 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI dialogueContent;
     private GameObject dialogueButton;
 
-    //private InputAction submitAction;
-
     private void Awake()
     {
         Instance = this;
@@ -38,6 +34,9 @@ public class DialogueManager : MonoBehaviour
         //submitAction = InputSystem.actions.FindAction("UI/Submit");
     }
 
+    /// <summary>
+    /// If not in combat and the game is not paused, toggle the current input map
+    /// </summary>
     private void ToggleInputMap()
     {
         if (!CombatEncounterManager.Instance.isInCombat && 
@@ -47,6 +46,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instance a dialogue prefab with the data provided by <paramref name="dialogue"/> and place it in the relevant location
+    /// </summary>
+    /// <param name="dialogue"></param>
     public void StartDialogue(Dialogue dialogue)
     {
         if (isDialogueInProgress)
@@ -106,6 +109,11 @@ public class DialogueManager : MonoBehaviour
         NextSentence();
     }
 
+    /// <summary>
+    /// Coroutine that makes every letter of the dialogue content be typed out with a delay
+    /// </summary>
+    /// <param name="sentence"></param>
+    /// <returns></returns>
     private IEnumerator TypeLetters(char[] sentence)
     {
         dialogueContent.text = "";
@@ -120,6 +128,11 @@ public class DialogueManager : MonoBehaviour
         isSentenceInProgress = false;
     }
 
+
+    /// <summary>
+    /// If there is one, go to the next sentence
+    /// If not, end the dialogue
+    /// </summary>
     public void NextSentence()
     {
         if (Instance == this)
@@ -156,6 +169,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ends the currently opened dialogue
+    /// </summary>
     private void EndDialogue()
     {
         ToggleInputMap();
@@ -167,11 +183,19 @@ public class DialogueManager : MonoBehaviour
         DialogueEvents.dialogueDone.Invoke();
     }
 
+    /// <summary>
+    /// Returns if there is an opened dialogue box
+    /// </summary>
+    /// <returns></returns>
     public bool GetIsDialogueInProgress()
     {
         return isDialogueInProgress;
     }
 
+    /// <summary>
+    /// Sets the currently selected button in the UI to the one that continues/ends the dialogue
+    /// </summary>
+    /// <param name="button"></param>
     private void SetSelectedButton(GameObject button)
     {
         EventSystem.current.SetSelectedGameObject(button);

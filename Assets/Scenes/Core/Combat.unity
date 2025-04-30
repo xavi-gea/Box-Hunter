@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Creature Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -566,8 +566,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Move desc
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1940,16 +1940,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1583198982}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
---- !u!1 &1030035027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
-  m_PrefabInstance: {fileID: 1030035026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1093021212 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3763338944522935780, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
@@ -1960,7 +1952,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5991089208712763560, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
   m_PrefabInstance: {fileID: 1124270588}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124270589}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -2097,36 +2089,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1124270590}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
---- !u!1 &1124270589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9050582237932651226, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
-  m_PrefabInstance: {fileID: 1124270588}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1124270590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124270589}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: 153.0867
-  m_MinHeight: 50
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!1 &1148865005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,8 +2327,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Affinity
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2624,8 +2588,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Creature Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2711,32 +2675,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5991089208712763560, guid: 94f38db12adf10543a22a3a54aadca81, type: 3}
   m_PrefabInstance: {fileID: 1030035026}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030035027}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1583198982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030035027}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: 153.0867
-  m_MinHeight: 50
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!1 &1659599479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,8 +3317,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Amount
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
