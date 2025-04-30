@@ -10,6 +10,12 @@ public class SceneController : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// Load the specified <paramref name="sceneName"/>
+    /// </summary>
+    /// <param name="sceneName">Name of the scene</param>
+    /// <param name="isAsync">If the loading must be async</param>
+    /// <param name="loadSceneMode">The loading mode</param>
     public void LoadScene(string sceneName, bool isAsync, LoadSceneMode loadSceneMode)
     {
         if (Instance == this)

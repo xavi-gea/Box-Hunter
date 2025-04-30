@@ -28,6 +28,12 @@ public static class FileManager
     //    }
     //}
 
+    /// <summary>
+    /// Try to write to disk the specified <paramref name="fileContent"/> inside a file with the name provided by <paramref name="fileName"/>
+    /// </summary>
+    /// <param name="fileName">Name of the file to write</param>
+    /// <param name="fileContent">Content of the file to write</param>
+    /// <returns></returns>
     public static bool WriteToFile(string fileName, string fileContent)
     {
         string filePath = Path.Combine(Application.dataPath, fileName);
@@ -71,6 +77,11 @@ public static class FileManager
     //       return fileContent;
     //   }
 
+    /// <summary>
+    /// Try to load from disk a file with the name provided by <paramref name="fileName"/>
+    /// </summary>
+    /// <param name="fileName">Name of the file to load</param>
+    /// <returns></returns>
     public static string LoadFromFile(string fileName)
     {
         string filePath = Path.Combine(Application.dataPath, fileName);

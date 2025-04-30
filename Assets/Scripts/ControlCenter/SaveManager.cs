@@ -11,6 +11,9 @@ public class SaveManager : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// Save relevant game data to a persistent JSON file by using the content of an instantiated <see cref="SaveData"/>
+    /// </summary>
     public void Save()
     {
         if (Instance == this)
@@ -18,8 +21,6 @@ public class SaveManager : MonoBehaviour
             SaveData saveData = new();
             saveData.currentSceneName = SceneManager.GetActiveScene().name;
             saveData.playerPosition = PlayerManager.Instance.playerGameObject.transform.position;
-
-            //FileManager.WriteToFile(saveFileName, JsonUtility.ToJson(saveData),"SaveData");
 
             string dialogueContent = "Partida guardada";
 
@@ -39,6 +40,10 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Try to load existing saved data from a file, put it in a instantiated <see cref="SaveData"/> and use it
+    /// </summary>
     public void Load()
     {
         if (Instance == this)

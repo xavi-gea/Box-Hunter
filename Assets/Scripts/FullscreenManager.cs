@@ -13,6 +13,11 @@ public class FullscreenManager : MonoBehaviour
     private readonly string fullScreenText = "Pantalla completa";
     private readonly string windowedText = "Ventana";
 
+
+    /// <summary>
+    /// If the <see cref="Screen"/> is fullScreen, set the <see cref="buttonText"/> text as the <see cref="fullScreenText"/> one
+    /// If not, use <see cref="windowedText"/>
+    /// </summary>
     private void Awake()
     {
         buttonText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
@@ -27,6 +32,10 @@ public class FullscreenManager : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// Toggle betweeen fullscreen and windowed, changing the <see cref="buttonText"/> text
+    /// </summary>
     public void ChangeScreenMode()
     {
         if (Screen.fullScreen)
@@ -48,6 +57,10 @@ public class FullscreenManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Change the <see cref="buttonText"/> text to the provided <paramref name="newText"/>
+    /// </summary>
+    /// <param name="newText"></param>
     private void UpdateButtonText(string newText)
     {
         if (buttonText == null)
