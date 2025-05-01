@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
-  m_sharedMaterial: {fileID: -5813092415356582824, guid: cbf4ffccc69383e40b8a7f12a80d3be3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29bd2e3025c68ae4e961bc0366c59287, type: 2}
+  m_sharedMaterial: {fileID: 1516407440863958030, guid: 29bd2e3025c68ae4e961bc0366c59287, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 6568224912523135521, guid: e509c391cf618164fb1c4ab633be90e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -242,9 +242,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8380091709258990408, guid: e509c391cf618164fb1c4ab633be90e6, type: 3}
+    m_PressedSprite: {fileID: 5300809404953644844, guid: e509c391cf618164fb1c4ab633be90e6, type: 3}
+    m_SelectedSprite: {fileID: -8380091709258990408, guid: e509c391cf618164fb1c4ab633be90e6, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
