@@ -1,18 +1,28 @@
 using TMPro;
 using UnityEngine;
 
+public class WindowedProperties
+{
+    public int Width { get; set; }
+    public int Height { get; set; }
+    public Vector2Int Position {  get; set; }
+
+    public WindowedProperties(int width, int height, Vector2Int position)
+    {
+        Width = width;
+        Height = height;
+        Position = position;
+    }
+}
+
 public class FullscreenManager : MonoBehaviour
 {
     private TextMeshProUGUI buttonText;
 
-    private int windowedWidth = Screen.width;
-    private int windowedHeight = Screen.height;
+    private WindowedProperties windowedProperties;
 
-    private Vector2Int windowedPosition;
-
-    private readonly string fullScreenText = "Pantalla completa";
+    private readonly string fullScreenText = "Completa";
     private readonly string windowedText = "Ventana";
-
 
     /// <summary>
     /// If the <see cref="Screen"/> is fullScreen, set the <see cref="buttonText"/> text as the <see cref="fullScreenText"/> one
@@ -20,6 +30,8 @@ public class FullscreenManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        windowedProperties = new WindowedProperties(Screen.width, Screen.height, Screen.mainWindowPosition);
+
         buttonText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
 
         if (Screen.fullScreen)
@@ -40,16 +52,16 @@ public class FullscreenManager : MonoBehaviour
     {
         if (Screen.fullScreen)
         {
-            Screen.SetResolution(width: windowedWidth, height: windowedHeight, false);
-            Screen.MoveMainWindowTo(Screen.mainWindowDisplayInfo, windowedPosition);
+            Screen.SetResolution(windowedProperties.Width, windowedProperties.Height, false);
+            Screen.MoveMainWindowTo(Screen.mainWindowDisplayInfo, windowedProperties.Position);
 
             UpdateButtonText(windowedText);
         }
         else
         {
-            windowedWidth = Screen.width;
-            windowedHeight = Screen.height;
-            windowedPosition = Screen.mainWindowPosition;
+            windowedProperties.Width = Screen.width;
+            windowedProperties.Height = Screen.height;
+            windowedProperties.Position = Screen.mainWindowPosition;
 
             Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
 
@@ -60,7 +72,7 @@ public class FullscreenManager : MonoBehaviour
     /// <summary>
     /// Change the <see cref="buttonText"/> text to the provided <paramref name="newText"/>
     /// </summary>
-    /// <param name="newText"></param>
+    /// <param name="newText">Text to change the button with</param>
     private void UpdateButtonText(string newText)
     {
         if (buttonText == null)
@@ -68,7 +80,7 @@ public class FullscreenManager : MonoBehaviour
             buttonText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        buttonText.text = "Modo: " + newText;
+        buttonText.text = newText;
     }
 }
 
