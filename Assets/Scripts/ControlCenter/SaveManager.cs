@@ -9,6 +9,25 @@ public class SaveManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        LoadPlayerPrefs();
+    }
+
+    public void SavePlayerPrefs()
+    {
+        if (Instance == this)
+        {
+            PlayerPrefs.SetFloat("AudioMainVolume", AudioListener.volume);
+        }
+        else
+        {
+            Instance.SavePlayerPrefs();
+        }
+    }
+
+    private void LoadPlayerPrefs()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("AudioMainVolume");
     }
 
     /// <summary>

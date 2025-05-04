@@ -7,7 +7,16 @@ public class AudioVolumeUpdater : MonoBehaviour
 
     private void Awake()
     {
+        GetVolumeSlider();
+    }
+
+    /// <summary>
+    /// Gets and assigns the volume slider gameObject and default value
+    /// </summary>
+    private void GetVolumeSlider()
+    {
         volumeSlider = gameObject.GetComponent<Slider>();
+        volumeSlider.value = AudioListener.volume;
     }
 
     /// <summary>
@@ -17,9 +26,13 @@ public class AudioVolumeUpdater : MonoBehaviour
     {
         if (volumeSlider == null)
         {
-            volumeSlider = gameObject.GetComponent<Slider>();
+            GetVolumeSlider();
+        }
+        else
+        {
+            AudioListener.volume = volumeSlider.value;
         }
 
-        AudioListener.volume = volumeSlider.value;
+        SaveManager.Instance.SavePlayerPrefs();
     }
 }
