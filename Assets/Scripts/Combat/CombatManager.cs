@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class CombatManager : MonoBehaviour
 {
     // must be inside combat scene!
 
-    CombatScreenManager screenManager;
+    private CombatScreenManager screenManager;
 
     [Header("Field Screen")]
     [SerializeField]
