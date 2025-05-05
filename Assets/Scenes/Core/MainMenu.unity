@@ -4272,10 +4272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb37fb904579bd540b19fe9c5476cbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SampleScene
+  sceneName: Scene1
   isAsync: 1
   loadSceneMode: 0
-  spawnLocation: {fileID: 11400000, guid: 494a547d98b52604fb7436395ffbc3d2, type: 2}
+  spawnLocation: {fileID: 0}
 --- !u!1 &1748547461
 GameObject:
   m_ObjectHideFlags: 0
