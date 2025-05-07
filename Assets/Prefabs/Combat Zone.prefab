@@ -98,5 +98,5 @@ MonoBehaviour:
   baseCombatChance: 0
   chanceIncrease: 0.02
   creaturePool:
-  - creature: {fileID: 11400000, guid: db2a4cd6837f2c548abac414fc6402e8, type: 2}
+  - creature: {fileID: 11400000, guid: 656993de65189b04392777330dcbf657, type: 2}
     chance: 100
