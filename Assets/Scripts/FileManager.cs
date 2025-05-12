@@ -1,6 +1,9 @@
 using System.IO;
 using UnityEngine;
 
+/// <summary>
+/// Load and save the provided file
+/// </summary>
 public static class FileManager
 {
     //public static bool WriteToFile(string fileName, string fileContent, string fileLocation = null)

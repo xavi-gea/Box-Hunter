@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9069280529133330139}
   - component: {fileID: 7379552151014836115}
-  - component: {fileID: 481862126933171011}
   - component: {fileID: 4538563085461130006}
   - component: {fileID: 7550610154305145762}
   - component: {fileID: 4968667584793908579}
@@ -22,7 +21,7 @@ GameObject:
   - component: {fileID: 2956986310877647394}
   m_Layer: 0
   m_Name: Control Center
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,19 +53,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6136a1923ec215749a915c4208d11608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &481862126933171011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8425940672267509065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84aee5ffb0a5ff048b0d5fafab319fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: MainMenu
 --- !u!114 &4538563085461130006
 MonoBehaviour:
   m_ObjectHideFlags: 0

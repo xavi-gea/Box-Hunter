@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 using SystemRandom = System.Random;
 
+/// <summary>
+/// Manage the potential combat encounter, starting combat if necessary
+/// </summary>
 public class CombatEncounterManager : MonoBehaviour
 {
     public static CombatEncounterManager Instance { get; private set; }

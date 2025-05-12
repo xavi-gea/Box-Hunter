@@ -15,6 +15,9 @@ public class WindowedProperties
     }
 }
 
+/// <summary>
+/// Manage fullscreen and windowed views
+/// </summary>
 public class FullscreenManager : MonoBehaviour
 {
     private TextMeshProUGUI buttonText;

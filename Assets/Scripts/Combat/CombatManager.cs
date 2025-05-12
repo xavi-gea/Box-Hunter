@@ -1,10 +1,11 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage the started combat encounter, eventually ending it
+/// </summary>
 public class CombatManager : MonoBehaviour
 {
     // must be inside combat scene!
@@ -90,6 +91,9 @@ public class CombatManager : MonoBehaviour
         DialogueManager.Instance.StartDialogue(currentDialogue);
     }
 
+    /// <summary>
+    /// Set the combat data that the variables <see cref="playerCombatData"/> and <see cref="enemyCombatData"/> will use
+    /// </summary>
     private void SetCombatData()
     {
         // get player creature
@@ -110,7 +114,7 @@ public class CombatManager : MonoBehaviour
 
         UpdateHealth();
 
-        // combat moves
+        // player combat moves
 
         foreach (CombatMove move in playerCombatData.CombatMoves)
         {

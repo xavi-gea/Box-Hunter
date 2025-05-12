@@ -4,6 +4,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage the active state of the provided gameObjects
+/// </summary>
 public class ScreenManager : MonoBehaviour
 {
     public static ScreenManager Instance { get; private set; }

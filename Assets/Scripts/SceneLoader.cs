@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Used to load scenes from onclick events in buttons
+/// Load scenes from onclick events in buttons
 /// </summary>
 public class SceneLoader : MonoBehaviour
 {
@@ -21,6 +21,8 @@ public class SceneLoader : MonoBehaviour
     /// <param name="collision">Collider of the parent gameObject</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("ontriggerEnter");
+
         if (collision.CompareTag("Player"))
         {
             PlayerManager.Instance.spawnLocation = spawnLocation;

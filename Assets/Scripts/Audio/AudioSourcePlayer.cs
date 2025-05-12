@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Play the provided audio source
+/// </summary>
 public class AudioSourcePlayer : MonoBehaviour
 {
     private AudioSource audioSource;

@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Manage the active state of the visual gameObjects in the combat encounter
+/// </summary>
 public class CombatScreenManager : MonoBehaviour
 {
     /// <summary>

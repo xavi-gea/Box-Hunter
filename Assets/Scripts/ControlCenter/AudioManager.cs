@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Manage the sound of the game
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }

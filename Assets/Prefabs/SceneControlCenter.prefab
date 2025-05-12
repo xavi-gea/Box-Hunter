@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8314407044678126761}
+  - component: {fileID: 5170523652847393674}
   - component: {fileID: 5094517992710422751}
   m_Layer: 0
   m_Name: SceneControlCenter
@@ -32,6 +33,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5170523652847393674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225249384670183016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1558722659b27c348afa06572efce572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootSceneName: Root
+  rootControlCenter: {fileID: 8425940672267509065, guid: af2937ebce2b38a439ce322dcd637621, type: 3}
 --- !u!114 &5094517992710422751
 MonoBehaviour:
   m_ObjectHideFlags: 0

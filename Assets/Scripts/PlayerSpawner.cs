@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Spawn or move the player when this loads
+/// </summary>
 public class PlayerSpawner : MonoBehaviour
 {
     public SpawnLocation defaultSpawnLocation;

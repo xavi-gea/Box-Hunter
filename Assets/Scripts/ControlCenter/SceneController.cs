@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Load the provided scene
+/// </summary>
 public class SceneController : MonoBehaviour
 {
     public static SceneController Instance { get; private set; }
@@ -20,18 +23,21 @@ public class SceneController : MonoBehaviour
     {
         if (Instance == this)
         {
-            if (sceneName.Equals(ScreenManager.Instance.mainMenuSceneName))
+            if (!SceneManager.GetSceneByName(sceneName).isLoaded)
             {
-                ScreenManager.Instance.UnPauseGame();
-            }
+                if (sceneName.Equals(ScreenManager.Instance.mainMenuSceneName))
+                {
+                    ScreenManager.Instance.UnPauseGame();
+                }
 
-            if (isAsync)
-            {
-                SceneManager.LoadSceneAsync(sceneName, loadSceneMode);
-            }
-            else
-            {
-                SceneManager.LoadScene(sceneName, loadSceneMode);
+                if (isAsync)
+                {
+                    SceneManager.LoadSceneAsync(sceneName, loadSceneMode);
+                }
+                else
+                {
+                    SceneManager.LoadScene(sceneName, loadSceneMode);
+                }
             }
         }
         else

@@ -1074,6 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 318505324}
+  - component: {fileID: 318505326}
   - component: {fileID: 318505325}
   m_Layer: 0
   m_Name: MenuControlCenter
@@ -1110,6 +1111,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToOpen: {fileID: 697309552}
+--- !u!114 &318505326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318505323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1558722659b27c348afa06572efce572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootSceneName: Root
+  rootControlCenter: {fileID: 8425940672267509065, guid: af2937ebce2b38a439ce322dcd637621, type: 3}
 --- !u!1 &323759249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,6 +4793,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7040921862858869865, guid: c77f2156680fe4a41b04684cfdb0c614, type: 3}
+      propertyPath: orthographic size
+      value: 6.375
+      objectReference: {fileID: 0}
     - target: {fileID: 7920814804078029879, guid: c77f2156680fe4a41b04684cfdb0c614, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

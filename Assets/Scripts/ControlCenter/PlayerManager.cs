@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Used to spawn or move the player character
+/// </summary>
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance { get; private set; }
@@ -47,6 +50,8 @@ public class PlayerManager : MonoBehaviour
             {
                 playerGameObject.transform.position = spawnLocation.position;
             }
+
+            spawnLocation = null;
         }
         else
         {

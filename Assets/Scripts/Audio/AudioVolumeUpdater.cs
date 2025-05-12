@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage main audio volume
+/// </summary>
 public class AudioVolumeUpdater : MonoBehaviour
 {
     private Slider volumeSlider;

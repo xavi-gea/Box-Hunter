@@ -7,6 +7,9 @@ public enum ActionMap
     UI
 }
 
+/// <summary>
+/// Manage player input
+/// </summary>
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }

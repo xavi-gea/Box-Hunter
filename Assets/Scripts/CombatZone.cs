@@ -11,6 +11,9 @@ public class CreaturePool
     public float chance;
 }
 
+/// <summary>
+/// Set up and manage a combat zone
+/// </summary>
 public class CombatZone : MonoBehaviour
 {
     [Tooltip("Combat chance at which the combat will start")]
