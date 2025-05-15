@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -272,6 +273,11 @@ public class CombatManager : MonoBehaviour
                 currentDamageAmount = move.amount;
                 combatMove = move;
             }
+        }
+
+        if (combatMove == null)
+        {
+            Debug.LogError("No combat moves");
         }
 
         return combatMove;
