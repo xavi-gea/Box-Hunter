@@ -120,10 +120,25 @@ public class DialogueManager : MonoBehaviour
         dialogueContent.text = "";
         isSentenceInProgress = true;
 
+        bool isTagInProgress = false;
+
         foreach (char letter in sentence)
         {
+            if (letter.Equals('<'))
+            {
+                isTagInProgress = true;
+            }
+            else if (letter.Equals('>'))
+            {
+                isTagInProgress = false;
+            }
+
             dialogueContent.text += letter;
-            yield return new WaitForSeconds(textDelay);
+
+            if (!isTagInProgress)
+            {
+                yield return new WaitForSeconds(textDelay);
+            }
         }
 
         isSentenceInProgress = false;
