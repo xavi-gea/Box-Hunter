@@ -224,4 +224,4 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 8
-  moveSpeed: 3.5
+  moveSpeed: 2.5

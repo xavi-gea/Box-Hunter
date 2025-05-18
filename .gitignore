@@ -72,4 +72,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-/Assets/SaveData.json
+
+# Custom save data
+/[Aa]ssets/SaveData.json
+/[Aa]ssets/SaveData.json.meta
