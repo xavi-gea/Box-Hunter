@@ -30,14 +30,14 @@ public class PlayerManager : MonoBehaviour
     {
         if (Instance == this)
         {
-            if (saveSpawnLocation == null)
+            if (SaveManager.Instance.isLoadingFromSave)
             {
-                spawnLocation = (spawnLocation == null) ? defaultSpawnLocation : spawnLocation;
+                spawnLocation = saveSpawnLocation;
+                SaveManager.Instance.isLoadingFromSave = false;
             }
             else
             {
-                spawnLocation = saveSpawnLocation;
-                saveSpawnLocation = null;
+                spawnLocation = (spawnLocation == null) ? defaultSpawnLocation : spawnLocation;
             }
 
             playerGameObject = GameObject.FindGameObjectWithTag("Player");

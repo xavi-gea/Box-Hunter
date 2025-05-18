@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03dc5d62863c76540995f3493676c611, type: 3}
-  m_Name: Javali
+  m_Name: Lynx
   m_EditorClassIdentifier: 
-  title: "Javal\xED Albar"
+  title: "Lince Ib\xE9rico"
   affinity: {fileID: 11400000, guid: 83ab1a8275482c84ebd4d99cf5ce906e, type: 2}
-  hitPoints: 50
+  hitPoints: 40
   combatMoves:
-  - {fileID: 11400000, guid: 9165eeb3c38959e4abe12bd065242178, type: 2}
+  - {fileID: 11400000, guid: 524d45c2eed1f0a47846c583b97d37f4, type: 2}

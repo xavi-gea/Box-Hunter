@@ -21,12 +21,9 @@ public class SceneLoader : MonoBehaviour
     /// <param name="collision">Collider of the parent gameObject</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ontriggerEnter");
-
         if (collision.CompareTag("Player"))
         {
             PlayerManager.Instance.spawnLocation = spawnLocation;
-            // transition here or in sceneController?
             LoadScene();
         }
     }

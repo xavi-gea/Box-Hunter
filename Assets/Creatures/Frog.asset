@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03dc5d62863c76540995f3493676c611, type: 3}
-  m_Name: Dummy
+  m_Name: Frog
   m_EditorClassIdentifier: 
-  title: Dummy
-  affinity: {fileID: 11400000, guid: a0884eac8121a6b44a960af5771c539e, type: 2}
-  hitPoints: 100
+  title: Rana iberica
+  affinity: {fileID: 11400000, guid: 700d5a61be34c1e4aad6b6d218030b35, type: 2}
+  hitPoints: 70
   combatMoves:
-  - {fileID: 11400000, guid: 44a8b34adba468c48832876458d17b18, type: 2}
-  - {fileID: 11400000, guid: a062a2b4df4216040a10f71d7ef80ece, type: 2}
+  - {fileID: 11400000, guid: b88325aa2dca3534d9b48d83d6d05262, type: 2}

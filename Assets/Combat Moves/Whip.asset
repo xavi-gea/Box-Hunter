@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d806396d952dd74468bee6bb88b93f79, type: 3}
-  m_Name: Abandoned Cabin
+  m_Script: {fileID: 11500000, guid: 4bfb674f97631504bae4b73f5a332cbd, type: 3}
+  m_Name: Whip
   m_EditorClassIdentifier: 
-  subject: 
-  dialogueLines:
-  - "<i>Esta caba\xF1a parece haber sido abandonada hace mucho tiempo</i>"
-  - "<i>A\xFAn as\xED, la puerta permanece firmemente cerrada</i>"
+  title: Latigazo
+  description: "Golpea con un l\xE1tigo hecho de ra\xEDces"
+  affinity: {fileID: 11400000, guid: 83ab1a8275482c84ebd4d99cf5ce906e, type: 2}
+  moveType: 0
+  amount: 10

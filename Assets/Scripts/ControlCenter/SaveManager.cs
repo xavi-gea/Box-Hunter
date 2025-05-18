@@ -9,6 +9,8 @@ public class SaveManager : MonoBehaviour
     public static SaveManager Instance { get; private set; }
     public const string saveFileName = "SaveData.json";
 
+    public bool isLoadingFromSave = false;
+
     private void Awake()
     {
         Instance = this;
@@ -79,6 +81,8 @@ public class SaveManager : MonoBehaviour
 
                 // first playerGameObject
                 PlayerManager.Instance.saveSpawnLocation = saveSpawnLocation;
+
+                isLoadingFromSave = true;
 
                 // then currentSceneName
                 SceneController.Instance.LoadScene(saveData.currentSceneName,true,LoadSceneMode.Single);

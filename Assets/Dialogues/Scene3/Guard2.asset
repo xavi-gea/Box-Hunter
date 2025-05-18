@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d806396d952dd74468bee6bb88b93f79, type: 3}
-  m_Name: Abandoned Cabin
+  m_Name: Guard2
   m_EditorClassIdentifier: 
-  subject: 
+  subject: Guardia 2
   dialogueLines:
-  - "<i>Esta caba\xF1a parece haber sido abandonada hace mucho tiempo</i>"
-  - "<i>A\xFAn as\xED, la puerta permanece firmemente cerrada</i>"
+  - Con toda esta armadura, lo que se cargan las piernas es de otro mundo
+  - "Qu\xE9 ganas tengo de que llegue la guardia de noche"

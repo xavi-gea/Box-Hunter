@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d806396d952dd74468bee6bb88b93f79, type: 3}
-  m_Name: Abandoned Cabin
+  m_Script: {fileID: 11500000, guid: a526663705d9b724cac7988422adbbd6, type: 3}
+  m_Name: SpawnLocation1
   m_EditorClassIdentifier: 
-  subject: 
-  dialogueLines:
-  - "<i>Esta caba\xF1a parece haber sido abandonada hace mucho tiempo</i>"
-  - "<i>A\xFAn as\xED, la puerta permanece firmemente cerrada</i>"
+  position: {x: 0.5, y: 12.5, z: 0}

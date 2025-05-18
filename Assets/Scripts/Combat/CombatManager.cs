@@ -72,13 +72,12 @@ public class CombatManager : MonoBehaviour
         moveDetailsScreen.SetActive(false);
 
         SetCombatData();
-        // animations
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(CombatEncounterManager.Instance.combatSceneName));
 
         DialogueEvents.dialogueDone.AddListener(DialogueDone);
 
-        ShowDialogue("Te has topado con un " + enemyCombatData.Name + "!");
+        ShowDialogue("Te has topado con " + enemyCombatData.Name + "!");
     }
 
     /// <summary>

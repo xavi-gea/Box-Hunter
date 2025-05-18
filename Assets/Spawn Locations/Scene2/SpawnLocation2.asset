@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfb674f97631504bae4b73f5a332cbd, type: 3}
-  m_Name: Empujon
+  m_Script: {fileID: 11500000, guid: a526663705d9b724cac7988422adbbd6, type: 3}
+  m_Name: SpawnLocation2
   m_EditorClassIdentifier: 
-  title: "Empuj\xF3n"
-  description: Mueve al rival con fuerza
-  affinity: {fileID: 11400000, guid: 83ab1a8275482c84ebd4d99cf5ce906e, type: 2}
-  moveType: 0
-  amount: 15
+  position: {x: 6.5, y: -14.5, z: 0}
