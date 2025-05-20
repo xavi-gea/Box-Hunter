@@ -89,7 +89,7 @@ public static class FileManager
     {
         string filePath = Path.Combine(Application.dataPath, fileName);
 
-        string fileContent = "";
+        string fileContent;
 
         try
         {
@@ -98,6 +98,7 @@ public static class FileManager
         catch (System.Exception e)
         {
             Debug.LogException(e);
+            fileContent = null;
         }
 
         return fileContent;

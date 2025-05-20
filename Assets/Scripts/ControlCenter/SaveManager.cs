@@ -87,6 +87,13 @@ public class SaveManager : MonoBehaviour
                 // then currentSceneName
                 SceneController.Instance.LoadScene(saveData.currentSceneName,true,LoadSceneMode.Single);
             }
+            else
+            {
+                Dialogue dialogue = ScriptableObject.CreateInstance<Dialogue>();
+                dialogue.dialogueLines = new string[] { "No se ha encontrado ninguna partida guardada" };
+
+                DialogueManager.Instance.StartDialogue(dialogue);
+            }
         }
         else
         {
