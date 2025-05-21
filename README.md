@@ -15,3 +15,7 @@
 2. Descarga este repositorio y [añádelo como un proyecto existente desde tu disco](https://docs.unity3d.com/hub/manual/AddProject.html#add-an-existing-project-from-your-disk).
 
 3. Después de hacer cambios al juego, puedes [construirlo](https://docs.unity3d.com/6000.0/Documentation/Manual/build-profiles-reference.html).
+
+---
+
+Visual and audio assets by [Kenney](https://kenney.nl/)
